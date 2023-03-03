@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Roboto', sans-serif; }
+
+.wrapper { margin: 0 auto; max-width: 1200px; }
+
+header { max-width: 1200px; background: url("../img/header-fone.png"); background-size: 100%; background-repeat: no-repeat; padding: .5em; }
+header nav { display: flex; flex-direction: row; justify-content: space-around; align-items: center; }
+header nav .header-item { display: flex; flex-direction: row; justify-content: center; align-items: center; margin: .5em; }
+header nav .header-item p { padding: .3em; color: #fff; font-size: .8em; }
+
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+
+.grid-tamplate { display: grid; margin: 2em; }
+.grid-tamplate .grid-item { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; color: #000; font-size: 1em; text-align: left; }
+.grid-tamplate .grid-item button { background: #550063; background: linear-gradient(90deg, #550063 0%, #790973 35%, #182582 100%); border: none; border-radius: .2em; color: #fff; font-size: 1.5em; padding: .5em 1.1em; font-weight: 700; margin: .4em; transition: 1s; }
+.grid-tamplate .grid-item button:hover { transition: all ease 1s; background: #4b20a1; background: linear-gradient(90deg, #4b20a1 0%, #095579 39%, #9d1c71 100%); }
+.grid-tamplate .grid-item .bold { font-weight: 700; font-size: 2em; }
+
+.center { margin: 1em 0; text-align: center; width: 100%; }
+.center h1 { color: #000; font-size: 2em; margin: 0 auto; font-weight: 400; }
+.center h1 span { background: linear-gradient(135deg, #331ab1 20%, #ac10c1 70%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+.block { border-radius: .4em; display: flex; flex-direction: column; justify-content: center; align-items: center; overflow: hidden; margin: 1.5em; }
+.block .text { padding: .5em; }
+.block .text h1 { font-weight: 700; font-size: 1.5em; color: #000; margin: .3em; }
+.block .text p { font-weight: 300; font-size: 1em; color: #767676; }
+
+.gradient { background: #a12093; background: linear-gradient(90deg, #a12093 0%, #790973 39%, rgba(28, 44, 157, 0.5270483193) 100%); padding: 2em; }
+
+.item { flex-direction: column; justify-content: flex-end; align-items: center; text-align: center; margin: 2em; background-color: #fff; border-radius: .4em; position: relative; opacity: .6; }
+.item .ava { position: absolute; top: -73%; left: 25%; }
+.item p { font-size: 1em; color: #000; font-weight: 300; padding: 1em; }
+.item .line { width: 25%; margin: 0 auto; }
+.item .under-line { font-size: .6em; color: #767676; padding: .4em; margin: 0 auto; }
+
+.active { opacity: 1; }
+
+footer { background: #a12093; background: linear-gradient(90deg, #a12093 0%, #790973 39%, #1c2c9d 100%); color: #fff; border: .4em; }
+footer .footer-item { display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 2em; font-size: .9em; }
+
+.head { display: flex; flex-direction: column; padding: .8em; color: #fff; background: #550063; background: linear-gradient(90deg, #550063 0%, #790973 35%, #182582 100%); font-size: 1em; width: 100%; text-align: center; display: none; }
+.head .head-item { display: flex; flex-direction: row; justify-content: center; align-items: center; margin: 1em; }
+.head .head-item p { margin-left: .5em; }
+
+.menu { height: 0px; transition: all ease .5s; }
+
+@media screen and (max-width: 940px) { .grid-3 { grid-template-columns: repeat(1, 1fr); }
+  .item .ava { position: absolute; top: -116%; left: 39%; }
+  .block { text-align: center; }
+  header { display: none; }
+  .head { display: flex; } }
+@media screen and (max-width: 842px) { .grid-2 { grid-template-columns: repeat(1, 1fr); }
+  .item .ava { position: absolute; top: -116%; left: -14%; } }
+@media screen and (max-width: 570px) { .item .ava { display: none; } }
